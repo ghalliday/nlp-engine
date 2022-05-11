@@ -524,7 +524,7 @@ int NLP_ENGINE::readFiles(_TCHAR *path)
 
     if (dpdf != NULL) {
         unsigned char isFile =0x8;
-        while (epdf = readdir(dpdf)) {
+        while ((epdf = readdir(dpdf))) {
             if (epdf->d_name[0] != '.' && epdf->d_type == isFile) {
                 _stprintf(fullPath, _T("%s%s%s"),path,DIR_STR,epdf->d_name);
                 m_files.push_back(fullPath);

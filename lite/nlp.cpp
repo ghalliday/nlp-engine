@@ -1776,7 +1776,8 @@ if (compiled)																	// 07/05/00 AM.
 	return;
 	}
 
-clock_t   s_time, e_time;
+clock_t s_time = 0;
+clock_t e_time;
 
 if (flogfiles)																	// 02/21/02 AM.
 	s_time = clock();															// 12/28/98 AM.
